@@ -1,6 +1,9 @@
 h2{
     color: white;
 }
+body{
+    background-color: #F5F7F8;
+}
 .container{
     background-color: #2E2F41;
     display: flex;
@@ -9,7 +12,7 @@ h2{
     margin: 0 auto;
     border-radius: 10px;
     margin-top: 30px;
-
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.16);
 
 }
 .zone{
@@ -50,11 +53,7 @@ h2{
 
 }
 .main-content{
-    /* flex-grow: 1;
-    padding: 40px;
-    color: white;
-    text-align: center;
-    width: 70%; */
+    
     text-align: center;
     color: white;
     position: relative;
@@ -199,9 +198,11 @@ h2{
 }
 
 .alarm-list {
-  width: 100%;
   max-width: 500px;
+  margin: 0 auto;
+  width: 72%;
 }
+
 .add{
     font-family: sans-serif;
     font-size: 20px;
@@ -212,16 +213,20 @@ h2{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  background-color: #222831;
+  padding: 50px;
+  border-radius: 20px;
+  margin: 10px auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .alarm-time {
   font-size: 1.5rem;
   font-weight: bold;
+  font-family: monospace;
+  color: white;
+  
 }
 
 .alarm-actions {
@@ -237,13 +242,15 @@ h2{
 }
 
 .delete-alarm {
-  background-color: #e74c3c;
-  color: white;
+  background-color: #F8F0E5;
+  color: #3B060A;
+  font-weight: 700;
 }
 
 .toggle-alarm {
-  background-color: #2ecc71;
-  color: white;
+  background-color: #F8F0E5;
+  color: #2C3930;
+  font-weight: 700;
 }
 
 /* Timer Styles */
