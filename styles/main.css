@@ -3,13 +3,7 @@ h2{
 }
 .container{
     background-color: #2E2F41;
-    /* border-radius: 5px;
-    width: 70%;
-    text-align: center;
-    margin: 0 auto;
-    height: 550px; */
     display: flex;
-    height: 100hv;
     font-family: sans-serif;
     width: 60%;
     margin: 0 auto;
@@ -56,14 +50,36 @@ h2{
 
 }
 .main-content{
-    flex-grow: 1;
+    /* flex-grow: 1;
     padding: 40px;
     color: white;
     text-align: center;
-    width: 70%;
+    width: 70%; */
+    text-align: center;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+}
+.page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.content-wrapper{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 .time{
-   font-size: 48px;
+  font-size: 48px;
   font-weight: bold; 
 }
 .date {
@@ -73,8 +89,8 @@ h2{
 }
 /* Clock Face Styles */
 .clock {
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     background: #fff;
     position: relative;
@@ -158,4 +174,214 @@ h2{
         0 120px 0 -110px #333,
         /* 9 o'clock */
         -120px 0 0 -110px #333;
+}
+/* Alarm Styles */
+.add-alarm {
+  
+  background-color:#31363F;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.add-alarm:hover {
+  background-color:#3D4162;
+}
+
+.add-alarm .image {
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+}
+
+.alarm-list {
+  width: 100%;
+  max-width: 500px;
+}
+.add{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.alarm-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.alarm-time {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.alarm-actions {
+  display: flex;
+}
+
+.alarm-actions button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delete-alarm {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.toggle-alarm {
+  background-color: #2ecc71;
+  color: white;
+}
+
+/* Timer Styles */
+.timer-display {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 20px 0;
+  font-family: monospace;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px auto;
+  justify-content: center;
+  
+  
+}
+
+.timer-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#start-timer {
+ background-color: #F8F0E5;
+ color: #2C3930;
+ font-weight: 700;
+}
+
+#pause-timer {
+ background-color: #F8F0E5;
+ color: #FA812F;
+ font-weight: 700;
+}
+
+#reset-timer {
+background-color: #F8F0E5;
+color: #3B060A;
+font-weight: 700;
+}
+
+.timer-set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 30px auto;
+}
+
+.timer-set input {
+  width: 80px;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.timer-set span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Stopwatch Styles */
+.stopwatch-display {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 20px 0;
+  font-family: monospace;
+}
+
+.stopwatch-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.stopwatch-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#start-stopwatch {
+  background-color: #F8F0E5;
+  color: #2C3930;
+  font-weight: 700;
+}
+
+#pause-stopwatch {
+  background-color:#F8F0E5 ;
+  color: #FA812F;
+  font-weight: 700;
+}
+
+#reset-stopwatch {
+  background-color: #F8F0E5;
+  color: #3B060A;
+  font-weight: 700;
+}
+
+#lap-stopwatch {
+  background-color: #3498db;
+  color: white;
+  font-weight: 700;
+}
+
+.laps-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.laps-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.lap-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lap-number {
+  font-weight: bold;
+  color: #7f8c8d;
+}
+
+.lap-time {
+  font-family: monospace;
 }

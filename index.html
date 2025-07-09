@@ -10,40 +10,106 @@
     <div class="container">
       <aside class="navbar">
         <div class="logo">::</div>
-        <div class="nav-item active">
+        <div class="nav-item active" data-page="clock">
           <img class="image" src="assets/icons/clock.png" alt="" />
           <div>Clock</div>
         </div>
-        <div class="nav-item">
+        <div class="nav-item" data-page="alarm">
           <img class="image" src="assets/icons/clock 3.png" alt="" />
           <div>Alarm</div>
         </div>
-        <div  class="nav-item">
+        <div class="nav-item" data-page="timer">
           <img class="image" src="assets/icons/hourglass 1.png" alt="" />
           <div>Timer</div>
         </div>
-        <div class="nav-item">
-          <img class=" image" src="assets/icons/timer.png" alt="" />
+        <div class="nav-item" data-page="stopwatch">
+          <img class="image" src="assets/icons/timer.png" alt="" />
           <div>Stopwatch</div>
         </div>
       </aside>
 
       <main class="main-content">
-        <h2>clock</h2>
-        <div class="time">19:15</div>
-        <div class="date">Fri, 5 Jul</div>
-        <div class="clock">
-            <div class="hand hour-hand"></div>
-            <div class="hand minute-hand"></div>
-            <div class="hand second-hand"></div>
-            <div class="center-point"></div>
+        <div class="page" id="clock">
+          <div class="content-wrapper">
+            <h2>clock</h2>
+            <div class="time">19:15</div>
+            <div class="date">Fri, 5 Jul</div>
+            <div class="clock">
+              <div class="hand hour-hand"></div>
+              <div class="hand minute-hand"></div>
+              <div class="hand second-hand"></div>
+              <div class="center-point"></div>
+            </div>
           </div>
         </div>
-        <div class="page hidden" id="alarm"></div>
-        <div class="page hidden" id="timer"></div>
-        <div class="page hidden" id="stopwatch"></div>
+        <div class="page hidden" id="alarm">
+          <div class="content-wrapper">
+            <h2>Alarm</h2>
+            <div class="add-alarm">
+              <img class="image" src="assets/icons/plus.png" alt="" />
+              <div class="add">Add Alarm</div>
+            </div>
+            <div class="alarm-list">
+              <!-- Alarm items will be added here dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <div class="page hidden" id="timer">
+          <div class="content-wrapper">
+            <h2>Timer</h2>
+            <div class="timer-display">00:00:00</div>
+            <div class="timer-set">
+              <input
+                type="number"
+                id="hours"
+                min="0"
+                max="23"
+                placeholder="HH"
+              />
+              <span>:</span>
+              <input
+                type="number"
+                id="minutes"
+                min="0"
+                max="59"
+                placeholder="MM"
+              />
+              <span>:</span>
+              <input
+                type="number"
+                id="seconds"
+                min="0"
+                max="59"
+                placeholder="SS"
+              />
+            </div>
+            <div class="timer-controls">
+              <button class="timer-btn" id="start-timer">Start</button>
+              <button class="timer-btn" id="pause-timer">Pause</button>
+              <button class="timer-btn" id="reset-timer">Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="page hidden" id="stopwatch">
+          <div class="content-wrapper">
+            <h2>Stopwatch</h2>
+            <div class="stopwatch-display">00:00:00</div>
+            <div class="stopwatch-controls">
+              <button class="stopwatch-btn" id="start-stopwatch">Start</button>
+              <button class="stopwatch-btn" id="pause-stopwatch">Pause</button>
+              <button class="stopwatch-btn" id="reset-stopwatch">Reset</button>
+              <button class="stopwatch-btn" id="lap-stopwatch">Lap</button>
+            </div>
+            <div class="laps-container">
+              <h3>Laps:</h3>
+              <div class="laps-list"></div>
+            </div>
+          </div>
+        </div>
       </main>
-      
     </div>
+    <script type="module" src="components/main.js"></script>
   </body>
 </html>
