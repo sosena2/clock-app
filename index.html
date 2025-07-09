@@ -59,35 +59,37 @@
           <div class="content-wrapper">
             <h2>Timer</h2>
             <div class="timer-display">00:00:00</div>
-            <div class="timer-set">
-              <input
-                type="number"
-                id="hours"
-                min="0"
-                max="23"
-                placeholder="HH"
-              />
-              <span>:</span>
-              <input
-                type="number"
-                id="minutes"
-                min="0"
-                max="59"
-                placeholder="MM"
-              />
-              <span>:</span>
-              <input
-                type="number"
-                id="seconds"
-                min="0"
-                max="59"
-                placeholder="SS"
-              />
-            </div>
-            <div class="timer-controls">
-              <button class="timer-btn" id="start-timer">Start</button>
-              <button class="timer-btn" id="pause-timer">Pause</button>
-              <button class="timer-btn" id="reset-timer">Reset</button>
+            <div class="timer-buttons">
+              <div class="timer-set">
+                <input
+                  type="number"
+                  id="hours"
+                  min="0"
+                  max="23"
+                  placeholder="HH"
+                />
+                <span>:</span>
+                <input
+                  type="number"
+                  id="minutes"
+                  min="0"
+                  max="59"
+                  placeholder="MM"
+                />
+                <span>:</span>
+                <input
+                  type="number"
+                  id="seconds"
+                  min="0"
+                  max="59"
+                  placeholder="SS"
+                />
+              </div>
+              <div class="timer-controls">
+                <button class="timer-btn" id="start-timer">Start</button>
+                <button class="timer-btn" id="pause-timer">Pause</button>
+                <button class="timer-btn" id="reset-timer">Reset</button>
+              </div>
             </div>
           </div>
         </div>
@@ -96,12 +98,22 @@
           <div class="content-wrapper">
             <h2>Stopwatch</h2>
             <div class="stopwatch-display">00:00:00</div>
+
             <div class="stopwatch-controls">
-              <button class="stopwatch-btn" id="start-stopwatch">Start</button>
-              <button class="stopwatch-btn" id="pause-stopwatch">Pause</button>
-              <button class="stopwatch-btn" id="reset-stopwatch">Reset</button>
-              <button class="stopwatch-btn" id="lap-stopwatch">Lap</button>
+              <div class="timer-buttons">
+                <button class="stopwatch-btn" id="start-stopwatch">
+                  Start
+                </button>
+                <button class="stopwatch-btn" id="pause-stopwatch">
+                  Pause
+                </button>
+                <button class="stopwatch-btn" id="reset-stopwatch">
+                  Reset
+                </button>
+                <button class="stopwatch-btn" id="lap-stopwatch">Lap</button>
+              </div>
             </div>
+
             <div class="laps-container">
               <h3>Laps:</h3>
               <div class="laps-list"></div>
